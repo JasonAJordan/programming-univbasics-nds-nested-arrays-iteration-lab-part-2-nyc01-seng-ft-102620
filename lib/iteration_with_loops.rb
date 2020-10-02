@@ -9,9 +9,17 @@ def find_min_in_nested_arrays(src)
     inner_idx = 0
     inner_array = src[idx]
     min = inner_array[0]
+    
     while inner_idx < inner_array.length do 
       currentNum = inner_array[inner_idx]
       
       if currentNum < min 
-      
+        min = currentNum
+      end
+      inner_idx += 1
+    end 
+    newArray.push(min)
+    idx += 1
+  end 
+  newArray
 end
